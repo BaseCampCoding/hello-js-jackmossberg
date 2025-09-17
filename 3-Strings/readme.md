@@ -8,6 +8,14 @@ The password is always based on a poem and can be derived in a two-step process.
 The guard will recite the poem, one line at a time and you have to respond with an appropriate letter of that line.
 The guard will now tell you all the letters you responded with at once, and you need to write them down on a piece of paper in a specific format.
 The details of the process depend on which door you are trying to enter.
+# Here is the poem
+Stands so high
+Huge hooves too
+Impatiently waits for
+Reins and harness
+Eager to leave
+
+When the guard recites Stands so high, you'll respond h, when the guard recites Huge hooves too, you'll respond o.
 
 ## Task 1: Get the First Letter of a Line
 
@@ -25,12 +33,13 @@ The details of the process depend on which door you are trying to enter.
 ## Task 3: Get the Last Letter of a Line
 
 - For the back door, you must respond with the last letter of the line (ignoring any whitespace at the beginning or end).
-- **Declare a variable named `backDoorLetter` that contains the last letter (not whitespace) of a given line.**
+- **Declare a variable named `backDoorLetter` that contains the last letter (not whitespace) of the given line.**
+- **Reins and harness**
 - The variable should be set using another variable named `lineWithWhitespace`, which holds the current line (possibly with spaces).
 
 ## Task 4: Make a Polite Back Door Password
 
-- For the back door password, capitalize the word like in Task 2, but also add `, please` to the end.
+- For the back door password, capitalize the word 'horse' like in Task 2, but also add `, please` to the end.
 - **Declare a variable named `backDoorPassword` that contains the polite, capitalized version of the word.**
 - The variable should be set using another variable named `backDoorWord`, which holds the combined letters.
 
