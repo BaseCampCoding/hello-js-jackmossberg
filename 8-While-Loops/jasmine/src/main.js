@@ -30,32 +30,30 @@ for (let i = 0; i < limes.length - 1 && i < wedgesNeeded; i++) {
     limesCut++;
 }
 
-let timeLeft = 5;
-let orders = ["Tropical Island", "All or Nothing", "All or Nothing", "Green Garden"];
+let timeLeft = 7;
+let totalTime = 0;
+let orderIndex = 0;
+let orders = ["Energizer", "Tropical Island", "All or Nothing"];
 
-let remainingOrders = [];
-
-let lastOrder;
-let time = 0;
-for (let i = 0; i < orders.length - 1 && time < timeLeft; i++) {
-    if (juiceName == "Pure Strawberry Joy") {
-        time += 0.5;
-    } else if (juiceName == "Energizer" || juiceName == "Green Garden" ) {
-        time += 1.5;
-    } else if (juiceName == "All or Nothing") {
-        time += 5.0;
-    } else if (juiceName == "Tropical Island") {
-        time += 3.0;
+while (totalTime < timeLeft && orderIndex < orders.length) {
+    if (orders[orderIndex] == "Pure Strawberry Joy") {
+        totalTime += 0.5;
+    } else if (orders[orderIndex] == "Energizer" || orders[orderIndex] == "Green Garden") {
+        totalTime += 1.5;
+    } else if (orders[orderIndex] == "Tropical Island") {
+        totalTime += 3.0;
+    } else if (orders[orderIndex] == "All or Nothing") {
+        totalTime += 5.0;
     } else {
-        time += 2.5;
+        totalTime += 2.5;
     }
 
-    lastOrder++;
+    orderIndex += 1;
 }
 
-remainingOrders = orders.slice(lastOrder, orders.length - 1)
-
-console.log(limesCut);
-console.log(wedgesCut);
-
-console.log(remainingOrders);
+let remainingOrders = [];
+if (orderIndex < orders.length) {
+    for (let t = orderIndex; t < orders.length; t++) {
+        remainingOrders.push(orders[t]);
+    }
+}
