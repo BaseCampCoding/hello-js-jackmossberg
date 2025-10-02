@@ -17,11 +17,11 @@ let luckyInput = 123321;
 let luckyNumber = isPalindrome(luckyInput);
 let luckyInputStr = String(luckyInput);
 
-let userInput = 5;
+let userInput = '5'
 
-let errorMessage;
+let errorMessage = 'none';
 if (userInput === undefined || userInput === null) {
     errorMessage = 'Required field';
-} else if (typeof userInput != 'number') {
+} else if (typeof parseFloat(userInput) != 'number' || parseFloat(userInput) === 0) {
     errorMessage = 'Must be a number besides 0'
 }
